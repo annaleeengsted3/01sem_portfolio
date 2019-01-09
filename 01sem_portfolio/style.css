@@ -1,0 +1,874 @@
+* {
+    box-sizing: border-box;
+}
+
+section {
+    /*    max-width: 1200px;*/
+    margin: 0;
+}
+
+
+#splash {
+    border: none;
+    /*    max-width: none;*/
+    margin: 0px;
+    position: relative;
+    /*    overflow: hidden;*/
+}
+
+img {
+    width: 100%;
+    /*    height: auto;*/
+}
+
+
+body {
+    /*    margin: auto;*/
+    background-color: #dedfd9;
+    margin: 0;
+    /*    max-width: 1200px;*/
+}
+
+
+
+
+
+
+
+/*********************************************************REMEMBER: ANIMATE SPLASH FOG AND SLOW COLOR CHANGE ON NAVBAR**********************************************************/
+
+
+
+
+
+
+
+/****************************  Menu  ****************************/
+
+header {
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    padding-bottom: 5vw;
+    padding-top: 1vw;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+
+}
+
+/* unvisited link */
+header nav a:link {
+    /*    font-family: 'Work Sans', sans-serif;*/
+    font-family: sans-serif;
+    color: #555555;
+    font-weight: 100;
+    letter-spacing: .3rem;
+    text-shadow: 2px 5px 11px rgba(28, 110, 164, 0.71);
+    font-size: 1.1rem;
+    text-decoration: none;
+    /*    transition: transform .2s;*/
+    transition: color 1.5s ease;
+
+}
+
+
+header nav a {
+    margin-right: 1.1rem;
+    /*    transition: transform .2s;*/
+}
+
+header nav a:last-child {
+    margin-right: 0;
+}
+
+/* visited link */
+header nav a:visited {
+    color: #555555;
+}
+
+/* mouse over link */
+header nav a:hover {
+
+    color: #e25600;
+}
+
+/*
+ selected link 
+header nav a:active {}
+*/
+
+
+header nav {
+    display: inline-block;
+    margin: 0rem;
+}
+
+
+
+
+
+
+a:link {
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-weight: 100;
+    letter-spacing: .1rem;
+
+    font-size: 1.1rem;
+    text-decoration: underline;
+    transition: color 1s ease;
+
+
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: black;
+}
+
+
+
+#splashanim {
+    position: absolute;
+    display: none;
+
+}
+
+
+
+
+
+
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.child {
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 1vw;
+
+}
+
+
+.child img {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#tema1,
+#tema2,
+#tema3,
+#tema4,
+#splash {
+    position: relative;
+}
+
+
+
+
+.topbar {
+
+    left: 0;
+    top: 0;
+    padding-left: 2vw;
+    padding-top: 2vw;
+
+
+
+    position: absolute;
+
+    background-image: url("img/backarrow2.png");
+    background-size: 100%;
+    width: 11.769vw;
+    height: 13.5vw;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Typografi */
+
+h3 {
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+}
+
+p {
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+
+}
+
+
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    color: #d3d3d3;
+    font-weight: 100;
+    letter-spacing: .3rem;
+    text-shadow: 2px 5px 11px rgba(28, 110, 164, 0.71);
+    font-size: 1.1rem;
+    padding-left: 4vw;
+
+}
+
+ul,
+ol {
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+}
+
+.sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-top: 4vw;
+    margin-bottom: 6vw;
+}
+
+.column_wide {
+    flex-grow: 2;
+    flex-basis: 400px;
+    /*    border: 2px solid black;*/
+    background-color: #b2b1ad;
+    padding: 1rem;
+    margin-right: 1rem;
+    /*    display: flex;*/
+}
+
+
+
+.column_narrow {
+    flex-grow: 1;
+    flex-basis: 200px;
+    /*    border: 2px solid black;*/
+    background-color: #8a9296;
+    padding: 1rem;
+    margin-right: 1rem;
+
+    /*
+display: flex;
+flex-direction: column;
+align-items: center;
+*/
+
+}
+
+
+
+
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.txt {
+    flex-grow: 2;
+    flex-basis: 200px;
+}
+
+.image {
+    flex-grow: 1;
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /*    padding-left: 1vw;*/
+
+    align-items: center;
+}
+
+
+figcaption {
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-size: .7rem;
+    text-align: center;
+    font-style: italic;
+}
+
+figure {
+    margin: 1vw;
+}
+
+
+
+/*TEMA 1*/
+
+#tema1 .column_wide img {
+    padding-left: 1vw;
+    margin-bottom: 2vw;
+}
+
+
+/*TEMA 2*/
+
+#pilotimage img {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+/*
+#tema2 .column_narrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+*/
+
+
+
+
+
+
+
+/*TEMA 3*/
+
+
+
+
+
+#kvindebgsprite {
+
+    background-image: url("img/kvindesprite_lft_small.svg");
+    background-size: 500% 100%;
+    width: 21vw;
+    height: 35vw;
+
+    /*
+    position: absolute;
+
+    top: -6vw;
+    left: -31vw;
+*/
+
+    animation-name: kvbgsprite_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(5);
+    animation-direction: alternate;
+
+
+
+}
+
+
+.kvbgsprite {
+    animation-name: kvbgsprite_kf;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
+    animation-timing-function: steps(5);
+    animation-direction: alternate;
+}
+
+@keyframes kvbgsprite_kf {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: -500% 0%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*TEMA 4*/
+
+#userres .column_narrow img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#userres .column_wide figure {
+    margin-top: 4rem;
+}
+
+
+
+/*OM*/
+
+#about .top {
+    /*text-align: right;*/
+}
+
+#about .bottom {
+
+    text-align: center;
+}
+
+
+/*INTERVIEW MED PIGERNE*/
+
+.videowrap {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7rem;
+}
+
+/*
+#interview video {
+    margin-bottom: 5rem;
+}
+*/
+
+#interview h3 {
+    text-align: center;
+    color: black;
+}
+
+
+
+
+/*PILOTFILM*/
+
+#pilotfilm video {
+    width: 80vw;
+}
+
+#pilotfilm .videowrap {
+    margin-bottom: 4vw;
+}
+
+#pilotfilm h3 {
+    color: black;
+}
+
+
+
+
+
+
+
+/* Styling på accordion knapper */
+.accordion {
+    cursor: pointer;
+    width: 80vw;
+    text-align: left;
+    /*    position: absolute;*/
+    background-color: #314b5c;
+    margin-bottom: 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+
+
+button {
+    font-family: 'Libre Baskerville', serif;
+    color: #d3d3d3;
+    font-weight: 100;
+    letter-spacing: .3rem;
+    text-shadow: 2px 5px 11px rgba(28, 110, 164, 0.71);
+    font-size: 1rem;
+    padding-left: 4vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+
+
+.acccon {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20vh;
+    margin-top: 2vw;
+}
+
+
+/* Styling på accordion panel. */
+.panel {
+
+    display: none;
+    overflow: hidden;
+    width: 90vw;
+}
+
+
+
+.pil {
+    width: 1.7vw;
+    height: 1.1vw;
+    background-image: url(img/uparrow.svg);
+
+
+}
+
+
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+/*
+***************
+MEDIA QUERIES
+*************
+*/
+
+
+
+
+
+@media only screen and (min-width: 360px) {
+
+    header nav a:link {
+        font-size: 1.2rem;
+    }
+
+    header nav a {
+        margin-right: 1.3rem;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 413px) {
+
+    header nav a:link {
+        font-size: 1.4rem;
+    }
+
+    header nav a {
+        margin-right: 1.5rem;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 640px) {
+
+    header nav a:link {
+        font-size: 1.3rem;
+    }
+
+    header nav a {
+        margin-right: 1.9rem;
+    }
+
+
+}
+
+
+
+
+@media only screen and (min-width: 725px) {
+
+
+    header nav a:link {
+        font-size: 1.9rem;
+    }
+
+    header nav a {
+        margin-right: 4rem;
+    }
+
+
+    .child {
+        padding: 3vw;
+    }
+
+    .parent {
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    .topbar {
+        width: 6.769vw;
+        height: 7.5vw;
+        margin-left: 2vw;
+        margin-top: 2vw;
+
+    }
+
+
+
+    .column_narrow {
+        display: block;
+    }
+
+
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+
+
+    header {
+        bottom: 0;
+        padding-bottom: 2vw;
+    }
+
+    header nav a:link {
+        font-size: 1.9rem;
+    }
+
+    header nav a {
+        margin-right: 4rem;
+
+        /*        transition: transform 0.2s;*/
+    }
+
+    /*
+    header nav a:hover {
+        transform: scale(1.5);
+
+    }
+*/
+
+    button {
+
+        font-size: 1.1rem;
+        padding-left: 4vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+
+    #grabem figure {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+@media only screen and (min-width: 1280px) {
+
+
+    header {
+        bottom: 0;
+        padding-bottom: 5vw;
+    }
+
+
+    /*
+    #overflow {
+        width: 100vw;
+        height: 56.25vw;
+        overflow: hidden;
+        position: relative;
+    }
+*/
+
+    #splash {
+        width: 100vw;
+        height: 56.25vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    #splashanim {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        animation-name: splash1_kf;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+
+
+
+
+    }
+
+
+
+    @keyframes splash1_kf {
+        0% {
+            transform: translateX(4vw);
+        }
+
+
+        100% {
+            transform: translateX(-4vw);
+        }
+
+    }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1366px) {
+
+
+    header {
+        bottom: 0;
+    }
+
+    header nav a:link {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        margin-right: 8rem;
+
+    }
+
+
+
+    #splash {
+        width: 100vw;
+        height: 56.25vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    #splashanim {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        animation-name: splash1_kf;
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+
+
+
+
+
+
+
+    }
+
+
+
+    @keyframes splash1_kf {
+        0% {
+            transform: translateX(4vw);
+        }
+
+
+        100% {
+            transform: translateX(-4vw);
+        }
+
+    }
+
+
+    #pilotfilm video {
+        width: 60vw;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1400px) {
+
+
+    header {
+        bottom: 0;
+    }
+
+    header nav a:link {
+        font-size: 2rem;
+    }
+
+    header nav a {
+        margin-right: 8rem;
+    }
+
+
+}
